@@ -12,27 +12,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 
-# Inherit from potter device
-$(call inherit-product, device/huawei/potter/device.mk)
+# Inherit from sydneyi device
+$(call inherit-product, device/huawei/sydneyi/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := potter
-PRODUCT_NAME := lineage_potter
+PRODUCT_DEVICE := sydneyi
+PRODUCT_NAME := lineage_sydneyi
 PRODUCT_BRAND := HWPOT-H
-PRODUCT_MODEL := POT-LX1
+PRODUCT_MODEL := INE-AL00
 PRODUCT_MANUFACTURER := HUAWEI
 
-# Match stock value: ro.product.board=POT-LX1
-TARGET_BOOTLOADER_BOARD_NAME := POT-LX1
+TARGET_BOOTLOADER_BOARD_NAME := kirin710
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=POT \
-    PRIVATE_BUILD_DESC="POT-LX1-user 9 HUAWEIPOT-LX1 314-OVS-LGRP2 release-keys"
+    PRODUCT_NAME=INE \
+    PRIVATE_BUILD_DESC="INE-AL00-user 9 INE-LGRP1-CHN release-keys"
 
-BUILD_FINGERPRINT := HUAWEI/POT-LX1/HWPOT-H:9/HUAWEIPOT-L21/314C432:user/release-keys
+BUILD_FINGERPRINT := kirin710/kirin710/kirin710:9/PPR1.180610.011/root202111170229:user/release-keys

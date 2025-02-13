@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE=potter
+export DEVICE=sydneyi
 export DEVICE_COMMON=kirin710-9-common
 export VENDOR=huawei
 

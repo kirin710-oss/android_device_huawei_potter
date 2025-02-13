@@ -4,7 +4,7 @@
   SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.potter">
+    package="com.android.wifi.resources.sydneyi">
 
     <application android:hasCode="false" />
     <overlay

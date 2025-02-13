@@ -1,5 +1,5 @@
-# android_device_huawei_potter
- Device tree for P Smart 2019 (Potter)
+# android_device_huawei_sydneyi
+ Device tree for Nova 3I (sydneyi)
 
 Thanks a Roger, Alex, Surdu, Giovanni, Sebastiano pour leur aide
 

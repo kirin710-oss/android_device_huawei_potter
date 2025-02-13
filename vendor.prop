@@ -1,16 +1,10 @@
 # Camera
-ro.vendor.camera.platform_name=POT
+ro.vendor.camera.platform_name=INE
 
 # Bluetooth
-bluetooth.device.default_name=Huawei P Smart 2019
-
-# ro.boot.product.hardware.sku=POT-LX1
-# ro.build.id=HUAWEIPOT-L21
+bluetooth.device.default_name=Huawei Nova 3I
 
 ro.dual.sim.phone=true
-
-ro.product.hardwareversion=HL3POTM
-persist.sys.dualcards=true
 
 # AI
 ro.camera.master_ai_default=off

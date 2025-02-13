@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
+set -e
 function blob_fixup() {
     case "${1}" in
         odm/etc/camera/configeffect/quadra/*/raw_dpf.xml)
@@ -21,14 +21,14 @@ function blob_fixup() {
             iconv -f GB2312 -t UTF-8 -c -o ${2}.utf8 ${2}
             mv ${2}.utf8 ${2}
             tidy -quiet -asxml -xml -indent -wrap 0 -m --hide-comments 1 ${2}
-            ;;            
+            ;;
         odm/etc/libnfc-nci.conf)
             sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
             ;;
-        odm/lib64/hwcam/hwcam.kirin710.m.POT.so)
+        odm/lib64/hwcam/hwcam.kirin710.m.INE.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
             ;;
-        odm/lib64/hwcam/hwcam.kirin710.m.POT.so|odm/lib64/hwcam/hwcam.kirin710.m.POT.so)
+        odm/lib64/hwcam/hwcam.kirin710.m.INE.so|odm/lib64/hwcam/hwcam.kirin710.m.INE.so)
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.1.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@2.0.so" "${2}"
@@ -45,7 +45,7 @@ fi
 
 set -e
 
-export DEVICE=potter
+export DEVICE=sydneyi
 export DEVICE_COMMON=kirin710-9-common
 export VENDOR=huawei
 
